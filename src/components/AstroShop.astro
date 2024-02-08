@@ -1,0 +1,32 @@
+<section class="container astro-shop">
+
+  <h1>Productos destacados</h1>
+
+  <div class="astro-shop-wrapper">
+    <slot />
+  </div>
+
+</section>
+
+<style>
+
+	.astro-shop {
+		padding-top: 40px;
+		color: var(--clr-neutral-900);
+	}
+
+	.astro-shop-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		color: var(--clr-accent-100);
+		gap: .6em;
+		padding-top: 20px;
+	}
+
+  @media(max-width: 1050px) {
+    .astro-shop-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+	
+</style>

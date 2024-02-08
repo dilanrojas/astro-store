@@ -1,0 +1,53 @@
+<div class="astro-shirt-wrapper">
+  <div class="shirt-image-wrapper">
+    <img class="shop-img" src="/t-shirt.png" alt="">
+  </div>
+  <div class="shirt-info-wrapper">
+    <h1>T-Shirt</h1>
+    <h2>Oversized black T-Shirt</h2>
+    <p>CRC 8.000,00</p>
+  </div>
+</div>
+
+<style>
+  .astro-shirt-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--clr-neutral-200);
+    border-radius: 10px;
+    padding: 15px;
+    transition: scale 0.2s ease;
+  }
+  .astro-shirt-wrapper:hover {
+    scale: 103%;
+  }
+
+  .shirt-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .shirt-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+  }
+  .shirt-info-wrapper h1 {
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-350);
+    font-weight: var(--fw-semibold);
+  }
+  .shirt-info-wrapper h2 {
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-350);
+    font-weight: var(--fw-medium);
+  }
+  .shirt-info-wrapper p {
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-350);
+    font-weight: var(--fw-medium);
+  }
+</style>

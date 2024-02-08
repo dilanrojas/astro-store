@@ -47,6 +47,7 @@ const { title } = Astro.props;
 		--fs-200: .50rem;
 		--fs-250: .75rem;
 		--fs-300: .8rem;
+		--fs-350: .9rem;
 		--fs-400: 1rem;
 		--fs-450: 1.125rem;
 		--fs-500: 1.25rem;
@@ -106,7 +107,7 @@ const { title } = Astro.props;
 		margin-inline: auto;
 	}
 
-	button:not([class]) {
+	button {
 		background-color: var(--clr-neutral-100);
 		color: var(--clr-neutral-900);
 		border-radius: 50px;
@@ -118,8 +119,27 @@ const { title } = Astro.props;
 		transition: all 0.15s ease;
 	}
 
-	button:not([class]):hover {
+	button:hover {
 		background-color: var(--clr-accent-400);
 		color: var(--clr-neutral-100);
+	}
+
+	.shop-img {
+		width: 180px;
+	}
+	@media(max-width: 1000px) {
+		.shop-img {
+			width: 170px;
+		}
+	}
+	@media(max-width: 900px) {
+		.shop-img {
+			width: 150px;
+		}
+	}
+	@media(max-width: 700px) {
+		.shop-img {
+			width: 140px;
+		}
 	}
 </style>
