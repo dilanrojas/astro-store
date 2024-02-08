@@ -1,0 +1,82 @@
+<section class="astro-banner-wrapper">
+
+  <header class="astro-header-wrapper">
+    <h1>J <p>&</p> D project</h1>
+    <p>Nuestro primer Producto</p>
+  </header>
+
+  <div class="astro-button-wrapper">
+    <button>Continuar</button>
+  </div>
+
+  <div class="astro-banner-wrapper">
+    <img class="astro-banner" src="/astrobanner.jpg" alt="">
+  </div>
+
+</section>
+
+<style>
+
+  .astro-banner-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    max-height: 700px;
+    width: 100%
+  }
+
+  .astro-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    z-index: 30;
+  }
+  .astro-header-wrapper h1 {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-size: var(--fs-750);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
+  }
+  .astro-header-wrapper h1 p {
+    font-size: var(--fs-550);
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent-400);
+  }
+  .astro-header-wrapper p {
+    font-size: var(--fs-550);
+    font-weight: var(--fw-medium);
+    color: var(--clr-neutral-400);
+  }
+
+  .astro-button-wrapper {
+    display: flex;
+    z-index: 30;
+  }
+
+  .astro-banner-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .astro-banner-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(55%);
+  }
+
+</style>
+
+<script>
+  const astroBanner = document.querySelector('.astro-banner')
+
+  astroBanner.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+  })
+</script>
