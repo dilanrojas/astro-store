@@ -8,10 +8,13 @@
 
 </section>
 
+<hr>
+
 <style>
 
 	.astro-shop {
 		padding-top: 40px;
+		padding-bottom: 40px;
 		color: var(--clr-neutral-900);
 	}
 
@@ -24,6 +27,12 @@
 	}
 
   @media(max-width: 1050px) {
+    .astro-shop-wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media(max-width: 750px) {
     .astro-shop-wrapper {
       grid-template-columns: 1fr 1fr;
     }

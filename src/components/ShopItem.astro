@@ -1,11 +1,15 @@
+---
+const { itemName, itemDesc, itemPrice } = Astro.props
+---
+
 <div class="astro-shirt-wrapper">
   <div class="shirt-image-wrapper">
-    <img class="shop-img" src="/t-shirt.png" alt="">
+    <slot name="shop-item-image" />
   </div>
   <div class="shirt-info-wrapper">
-    <h1>T-Shirt</h1>
-    <h2>Oversized black T-Shirt</h2>
-    <p>CRC 8.000,00</p>
+    <h1>{itemName}</h1>
+    <h2>{itemDesc}</h2>
+    <p>{itemPrice}</p>
   </div>
 </div>
 

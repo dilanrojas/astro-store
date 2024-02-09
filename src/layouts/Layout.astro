@@ -29,8 +29,8 @@ const { title } = Astro.props;
 
 	:root {
 		--clr-neutral-100: white;
-		--clr-neutral-200: rgb(230, 230, 230);
-		--clr-neutral-300: rgb(200, 200, 200);
+		--clr-neutral-200: rgb(240, 240, 240);
+		--clr-neutral-300: rgb(210, 210, 210);
 		--clr-neutral-400: rgb(150, 150, 150);
 		--clr-neutral-500: rgb(70, 70, 70);
 		--clr-neutral-600: rgb(40, 40, 40);
@@ -124,22 +124,9 @@ const { title } = Astro.props;
 		color: var(--clr-neutral-100);
 	}
 
-	.shop-img {
-		width: 180px;
-	}
-	@media(max-width: 1000px) {
-		.shop-img {
-			width: 170px;
-		}
-	}
-	@media(max-width: 900px) {
-		.shop-img {
-			width: 150px;
-		}
-	}
-	@media(max-width: 700px) {
-		.shop-img {
-			width: 140px;
-		}
+	hr {
+		height: 4px;
+		background-color: var(--clr-neutral-500);
+		border: 0;
 	}
 </style>
