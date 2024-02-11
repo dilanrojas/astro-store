@@ -8,8 +8,7 @@ const { itemName, itemDesc, itemPrice } = Astro.props
   </div>
   <div class="shirt-info-wrapper">
     <h1>{itemName}</h1>
-    <h2>{itemDesc}</h2>
-    <p>{itemPrice}</p>
+    <p>₡ {itemPrice}</p>
   </div>
 </div>
 
@@ -36,6 +35,9 @@ const { itemName, itemDesc, itemPrice } = Astro.props
 
   .shirt-info-wrapper {
     display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
     flex-direction: column;
     gap: .5em;
   }
@@ -43,11 +45,6 @@ const { itemName, itemDesc, itemPrice } = Astro.props
     color: var(--clr-neutral-900);
     font-size: var(--fs-350);
     font-weight: var(--fw-semibold);
-  }
-  .shirt-info-wrapper h2 {
-    color: var(--clr-neutral-600);
-    font-size: var(--fs-350);
-    font-weight: var(--fw-medium);
   }
   .shirt-info-wrapper p {
     color: var(--clr-neutral-900);

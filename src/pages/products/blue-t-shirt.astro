@@ -1,0 +1,31 @@
+---
+import BuyLayout from "../../layouts/BuyLayout.astro";
+---
+
+<BuyLayout
+  itemName="Camiseta azul oversized"
+  itemPrice="8.000,00"
+  >
+
+  <img
+    slot="item-image"
+    src="/t-shirt-blue.webp" alt="t-shirt"
+  />
+
+</BuyLayout>
+
+<style>
+  img {
+    width: 350px;
+  }
+  @media(max-width: 900px) {
+    img {
+      width: 300px
+    }
+  }
+  @media(max-width: 800px) {
+    img {
+      width: 250px;
+    }
+  }
+</style>

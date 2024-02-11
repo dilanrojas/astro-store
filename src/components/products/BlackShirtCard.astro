@@ -1,0 +1,38 @@
+---
+import CardLayout from "../../layouts/CardLayout.astro";
+---
+
+<a href="/products/black-t-shirt/">
+	<CardLayout
+		itemName="Oversized Black t-shirt"
+  	itemPrice="8.000,00"
+  	>
+  
+  	<img
+    	slot="shop-item-image"
+    	src="/t-shirt-black.webp" alt="t-shirt"
+  	/>
+
+	</CardLayout>
+</a>
+
+<style>
+	img {
+		width: 180px;
+	}
+	@media(max-width: 1000px) {
+		img {
+			width: 170px;
+		}
+	}
+	@media(max-width: 900px) {
+		img {
+			width: 150px;
+		}
+	}
+	@media(max-width: 700px) {
+		img {
+			width: 140px;
+		}
+	}
+</style>
