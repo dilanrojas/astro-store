@@ -3,7 +3,7 @@
   <div class="pm-nav-wrapper container">
     <nav class="pm-nav-list-wrapper">
       <ul role="list" class="pm-nav-list">
-        <li><a href="#" class="pm-nav-item">Hombre</a></li>
+        <li><a href="#" class="pm-nav-item active">Hombre</a></li>
         <li><a href="#" class="pm-nav-item">Mujer</a></li>
         <li><a href="#" class="pm-nav-item">Información</a></li>
         <li><a href="#" class="pm-nav-item">Contacto</a></li>
@@ -194,6 +194,11 @@
 			color: var(--clr-accent-400);
 			background-color: var(--clr-accent-900)
 		}
+		.pm-nav-list a.active {
+			color: var(--clr-accent-400);
+			background-color: var(--clr-accent-900);
+			text-decoration: none;
+		}
 
 		.pm-nav-footer-wrapper {
 			display: flex;
@@ -225,18 +230,9 @@
 <script>
 	const menu = document.querySelector('.hamburguer');
 	const sidebar = document.querySelector('.pm-nav-list');
-	// const navItem = document.querySelectorAll('.pm-nav-item');
 
 	menu.addEventListener("click", () => {
 		menu.classList.toggle('active')
 		sidebar.classList.toggle('active')
 	})
-
-	// navItem.forEach(navItem => {
-	// 	navItem.addEventListener("click", () => {
-	// 		document.querySelector('.active')?.classList.remove('active');
-	// 		navItem.classList.add('active')
-	// 	})
-	// })
-
 </script>

@@ -1,5 +1,5 @@
 ---
-const { itemName, itemDesc, itemPrice } = Astro.props
+const { itemName, itemPrice } = Astro.props
 ---
 
 <div class="astro-shirt-wrapper">
@@ -14,12 +14,14 @@ const { itemName, itemDesc, itemPrice } = Astro.props
 
 <style>
   .astro-shirt-wrapper {
+    height: 300px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 1em;
     background-color: var(--clr-neutral-200);
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     transition: scale 0.2s ease;
   }
   .astro-shirt-wrapper:hover {
@@ -35,9 +37,11 @@ const { itemName, itemDesc, itemPrice } = Astro.props
 
   .shirt-info-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
-    justify-content: center;
     flex-direction: column;
     gap: .5em;
   }
