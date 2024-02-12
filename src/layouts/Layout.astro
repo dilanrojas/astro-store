@@ -104,6 +104,15 @@ const { title } = Astro.props;
 		font-size: var(--fs-400);
 	}
 
+	.astro-image {
+		width: 180px;
+	}
+	@media(max-width: 500px) {
+		.astro-image {
+			width: 160px;
+		}
+	}
+
 	/* Utility classes */
 	.container {
 		--max-width: 1110px;
@@ -134,5 +143,9 @@ const { title } = Astro.props;
 		height: 1px;
 		background-color: var(--clr-neutral-500);
 		border: 0;
+	}
+
+	:where(.flow > * + *) {
+		margin-top: var(--flow-spacer, 3em);
 	}
 </style>

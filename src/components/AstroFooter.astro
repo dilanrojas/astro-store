@@ -1,13 +1,105 @@
-<footer class="astro-footer-wrapper">
-  <h1>Footer goes here!</h1>
+<footer class="astro-footer">
+
+  <div class="astro-footer-wrapper container">
+    <div class="social-links-wrapper">
+      <h1>Redes sociales</h1>
+      <div class="social-links-list">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  
+    <div class="quick-links-wrapper">
+      <h1>Enlaces rápidos</h1>
+      <nav>
+        <ul role="list" class="quick-links-list flow" style="--flow-spacer: .5em">
+          <li><a href="#">Hombre</a></li>
+          <li><a href="#">Mujer</a></li>
+          <li><a href="#">Información</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="creators-wrapper">
+      <h1>Creadores</h1>
+      <ul role="list" class="creators-list flow" style="--flow-spacer: .5em">
+        <li><a href="https://www.instagram.com/jeremy.rojasv/"><i class="fa-brands fa-instagram"></i> Jeremy Rojas</a></li>
+        <li><a href="https://www.instagram.com/dilan_rojas11/"><i class="fa-brands fa-instagram"></i> Dilan Rojas</a></li>
+      </ul>
+    </div>
+
+    <div class="terms-conditions-wrapper">
+      <h1>Políticas</h1>
+
+      <ul role="list" class="term-conditions-list flow" style="--flow-spacer: .5em">
+        <li><a href="#">Devoluciones</a></li>
+        <li><a href="#">Reembolso</a></li>
+      </ul>
+    </div>
+
+  </div>
+
 </footer>
 
 <style>
-  .astro-footer-wrapper {
-    height: 250px;
-    background-color: black;
+  .astro-footer {
+    background-color: var(--clr-neutral-900);
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  .astro-footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3.5em;
+
+    padding: 50px 0px;
+  }
+  .astro-footer-wrapper h1 {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-semibold);
+  }
+  @media(max-width: 980px) {
+    .astro-footer-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media(max-width: 660px) {
+    .astro-footer-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  .astro-footer-wrapper a {
+    transition: color 0.12s ease;
+  }
+  .astro-footer-wrapper a:hover {
+    color: var(--clr-accent-400);
+  }
+  .astro-footer-wrapper > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+  }
+  .astro-footer-wrapper a {
+    color: var(--clr-neutral-400)
+  }
+
+  .social-links-list {
+    display: flex;
+    gap: 1.5em;
+  }
+  .social-links-list a {
+    font-size: var(--fs-700);
+  }
+
+  .quick-links-list {
+    columns: 2;
+  }
+
 </style>

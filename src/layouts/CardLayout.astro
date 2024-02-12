@@ -2,19 +2,19 @@
 const { itemName, itemPrice } = Astro.props
 ---
 
-<div class="astro-shirt-wrapper">
-  <div class="shirt-image-wrapper">
+<div class="astro-card-wrapper">
+  <div class="card-image-wrapper">
     <slot name="shop-item-image" />
   </div>
-  <div class="shirt-info-wrapper">
+  <div class="card-info-wrapper">
     <h1>{itemName}</h1>
     <p>₡ {itemPrice}</p>
   </div>
 </div>
 
 <style>
-  .astro-shirt-wrapper {
-    height: 300px;
+  .astro-card-wrapper {
+    max-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,35 +22,37 @@ const { itemName, itemPrice } = Astro.props
     background-color: var(--clr-neutral-200);
     border-radius: 10px;
     padding: 20px;
+    gap: 1em;
     transition: scale 0.2s ease;
   }
-  .astro-shirt-wrapper:hover {
+  .astro-card-wrapper:hover {
     scale: 103%;
   }
 
-  .shirt-image-wrapper {
+  .card-image-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 200px;
     width: 100%;
   }
 
-  .shirt-info-wrapper {
+  .card-info-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: 100px;
     flex-direction: column;
     gap: .5em;
   }
-  .shirt-info-wrapper h1 {
+  .card-info-wrapper h1 {
     color: var(--clr-neutral-900);
     font-size: var(--fs-350);
     font-weight: var(--fw-semibold);
   }
-  .shirt-info-wrapper p {
+  .card-info-wrapper p {
     color: var(--clr-neutral-900);
     font-size: var(--fs-350);
     font-weight: var(--fw-medium);
