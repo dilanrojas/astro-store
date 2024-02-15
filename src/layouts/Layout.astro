@@ -41,7 +41,7 @@ const { title } = Astro.props;
 		--clr-accent-100: rgb(235, 235, 255);
 		--clr-accent-400: rgb(120, 120, 255);
 		--clr-accent-500: rgb(80, 80, 255);
-		--clr-accent-900: rgb(6, 6, 13);
+		--clr-accent-900: rgb(9, 9, 20);
 		--clr-bg-body: var(--clr-neutral-100);
 
 		--fs-100: .25rem;
@@ -152,5 +152,19 @@ const { title } = Astro.props;
 
 	:where(.flow > * + *) {
 		margin-top: var(--flow-spacer, 3em);
+	}
+
+	.banner-men {
+		background: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url("/banner-men.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.banner-women {
+		background: linear-gradient(rgb(0, 0, 0, .8), rgb(0, 0, 0, .8)), url("/banner-women.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 </style>

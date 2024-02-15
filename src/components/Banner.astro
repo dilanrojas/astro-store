@@ -1,4 +1,8 @@
-<section class="astro-banner-wrapper">
+---
+const { bannerBg } = Astro.props
+---
+
+<section class:list={["astro-banner-wrapper banner", bannerBg || "no-banner"]}>
 
   <div class="banner-text-wrapper">
     <div class="banner-text">
@@ -10,6 +14,8 @@
         <button class="banner-button">Comprar</button>
       </a>
     </div>
+
+    <slot />
   </div>
 
 </section>
@@ -18,16 +24,13 @@
 
 <style>
   .astro-banner-wrapper {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("/astrobanner.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 750px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
+    position: relative;
   }
 
   .banner-text-wrapper {

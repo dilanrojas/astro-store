@@ -7,10 +7,10 @@ const { stateMen, stateWomen, stateInfo, stateContact } = Astro.props
   <div class="pm-nav-wrapper container">
     <nav class="pm-nav-list-wrapper">
       <ul role="list" class="pm-nav-list">
-				<li><a href="#" class:list={[stateMen || "pm-nav-item"]}>Hombre</a></li>
-				<li><a href="#" class:list={[stateWomen || "pm-nav-item"]}>Mujer</a></li>
-				<li><a href="#" class:list={[stateInfo || "pm-nav-item"]}>Información</a></li>
-				<li><a href="#" class:list={[stateContact || "pm-nav-item"]}>Contacto</a></li>
+				<li><a href="/" class:list={[stateMen || "pm-nav-item"]}>Hombre</a></li>
+				<li><a href="/women" class:list={[stateWomen || "pm-nav-item"]}>Mujer</a></li>
+				<li><a href="/information" class:list={[stateInfo || "pm-nav-item"]}>Información</a></li>
+				<li><a href="/contact" class:list={[stateContact || "pm-nav-item"]}>Contacto</a></li>
         <div class="pm-nav-footer-wrapper">
           <ul class="pm-nav-footer-list">
             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
