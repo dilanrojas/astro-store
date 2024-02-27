@@ -1,3 +1,7 @@
+# Live preview
+
+[click here](https://astro-store.pages.dev/)
+
 # Astro Starter Kit: Basics
 
 ```sh
